@@ -119,3 +119,5 @@ evals/                            test prompts and expected behaviours
 ## Licence
 
 [Apache-2.0](LICENSE). Copyright 2026 Manoj (DataFinFreak). Third-party notices in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+You may use, copy, modify, redistribute and sell this skill or your own version of it, including commercially. Keep the licence and copyright notice, and note what you changed. Contributions are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md).
