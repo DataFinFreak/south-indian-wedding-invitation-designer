@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Wedding Invite Demos</title>
+<meta name="description" content="Live demos for the South Indian Wedding Invitation Designer Agent Skill.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #fbf6ee; --ink: #2b1d14; --muted: #6b5847; --line: #e6d8c3; --card: #fffdf9; --accent: #7a1f2b; --gold: #a8812f; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #1b1410; --ink: #f3e8d8; --muted: #c2ad94; --line: #3b2e24; --card: #241b15; --accent: #e8a0a8; --gold: #d6b26a; }
+  }
+  :root[data-theme="dark"] { --bg: #1b1410; --ink: #f3e8d8; --muted: #c2ad94; --line: #3b2e24; --card: #241b15; --accent: #e8a0a8; --gold: #d6b26a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 Jost, system-ui, sans-serif; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 48px 16px 64px; }
+  header { text-align: center; max-width: 680px; margin: 0 auto 40px; }
+  .kicker { letter-spacing: .18em; text-transform: uppercase; font-size: 12px; color: var(--gold); margin: 0 0 8px; }
+  h1 { font: 600 clamp(2rem, 6vw, 3rem)/1.1 "Cormorant Garamond", Georgia, serif; margin: 0 0 14px; }
+  header p { color: var(--muted); margin: 0 0 12px; }
+  a { color: var(--accent); }
+  .repo { display: inline-block; margin-top: 6px; padding: 10px 18px; border: 1px solid var(--accent); border-radius: 999px; text-decoration: none; font-weight: 500; }
+  .repo:hover, .repo:focus-visible { background: var(--accent); color: var(--bg); }
+  h2 { font: 600 1.6rem/1.2 "Cormorant Garamond", Georgia, serif; margin: 40px 0 6px; }
+  .note { color: var(--muted); margin: 0 0 18px; font-size: 15px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+  .card { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit; transition: transform .2s, box-shadow .2s; }
+  .card:hover, .card:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
+  .card img { display: block; width: 100%; aspect-ratio: 390 / 600; object-fit: cover; object-position: top; background: var(--line); }
+  .card div { padding: 12px 14px 16px; }
+  .card h3 { font: 600 1.25rem/1.2 "Cormorant Garamond", Georgia, serif; margin: 0 0 4px; }
+  .card p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.45; }
+  .tag { display: inline-block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-top: 8px; }
+  footer { margin-top: 48px; text-align: center; font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kicker">Agent Skill demo gallery</p>
+    <h1>South Indian Wedding Invitation Designer</h1>
+    <p>An open-source Agent Skill that helps an AI assistant design animated, mobile-first South Indian wedding e-invites to share as a link on WhatsApp.</p>
+    <a class="repo" href="https://github.com/DataFinFreak/south-indian-wedding-invitation-designer">View the skill on GitHub</a>
+  </header>
+
+  <h2>What the skill ships</h2>
+  <p class="note">One reusable template with six presets, shown here with a fictional couple and venue.</p>
+  <div class="grid">
+    <a class="card" href="demos/template-sample.html"><img src="media/template-sample.jpg" alt="Cover of the fictional sample invite" loading="lazy" width="390" height="600"><div><h3>Template sample</h3><p>Fictional couple, Mysuru Aramane preset. Add <code>?preset=temple-kolam</code> to try another look.</p><span class="tag">Fictional</span></div></a>
+  </div>
+
+  <h2>Real invitations</h2>
+  <p class="note">The author&rsquo;s own wedding invitations, shared with permission. Hand-built designs that inspired the skill; the couple photo is left out. Tap the cover on each page to open it. Best on a phone.</p>
+  <div class="grid">
+    <a class="card" href="demos/rajamahal.html"><img src="media/rajamahal.jpg" alt="Rajamahal cover: sealed ivory envelope" loading="lazy" width="390" height="600"><div><h3>Rajamahal</h3><p>A sealed ivory envelope with a kumkum wax seal; gold Ambari elephants inside.</p></div></a>
+    <a class="card" href="demos/suprabhatha.html"><img src="media/suprabhatha.jpg" alt="Suprabhatha cover: carved temple doors" loading="lazy" width="390" height="600"><div><h3>Suprabhatha</h3><p>Carved teak temple doors swing open onto a saffron sunrise.</p></div></a>
+    <a class="card" href="demos/kanjeevaram.html"><img src="media/kanjeevaram.jpg" alt="Kanjeevaram cover: rani-pink silk pallu" loading="lazy" width="390" height="600"><div><h3>Kanjeevaram</h3><p>A rani-pink zari pallu sweeps aside to reveal peacock-teal silk.</p></div></a>
+    <a class="card" href="demos/navilu.html"><img src="media/navilu.jpg" alt="Navilu cover: peacock invitation" loading="lazy" width="390" height="600"><div><h3>Navilu</h3><p>A peacock&rsquo;s train of feathers unfolds, sweeps wide and dissolves into gold.</p></div></a>
+    <a class="card" href="demos/kagada.html"><img src="media/kagada.jpg" alt="Kagada cover: coral linen pop-up book" loading="lazy" width="390" height="600"><div><h3>Kagada</h3><p>A paper-cut pop-up book: the cover swings open and a paper scene pops up.</p><span class="tag">With music</span></div></a>
+    <a class="card" href="demos/rangoli.html"><img src="media/rangoli.jpg" alt="Rangoli cover: mandala on ivory paper" loading="lazy" width="390" height="600"><div><h3>Rangoli</h3><p>A rangoli mandala draws itself, fills with colour and bursts into powder.</p><span class="tag">With music</span></div></a>
+    <a class="card" href="demos/mallige.html"><img src="media/mallige.jpg" alt="Mallige cover: curtain of jasmine strands" loading="lazy" width="390" height="600"><div><h3>Mallige</h3><p>A curtain of Mysore jasmine strands parts to reveal a watercolour wash.</p></div></a>
+    <a class="card" href="demos/gulabi.html"><img src="media/gulabi.jpg" alt="Gulabi cover: champagne gatefold doors with a rose ribbon" loading="lazy" width="390" height="600"><div><h3>Gulabi</h3><p>Embossed gatefold doors tied with a rose satin ribbon open in 3D.</p></div></a>
+    <a class="card" href="demos/sutra.html"><img src="media/sutra.jpg" alt="Sutra cover: golden thread" loading="lazy" width="390" height="600"><div><h3>Sutra</h3><p>Two threads, turmeric and kumkum, stitch their way down the page as you scroll.</p></div></a>
+  </div>
+
+  <footer>
+    Music on Kagada and Rangoli is CC0 (public domain); credits are on each page. Code and template: Apache-2.0.
+  </footer>
+</div>
+</body>
+</html>

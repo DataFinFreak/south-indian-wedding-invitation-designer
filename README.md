@@ -4,6 +4,19 @@ An open-source [Agent Skill](https://agentskills.io) that helps an AI assistant 
 
 It interviews you for the exact event facts, offers three design directions, fills one self-contained HTML template (events, calendar grid, countdown, map, add-to-calendar, optional couple photo and music), checks contrast, phone layout and link previews, and drafts the share message. It never invents names, dates, timings or regional-language wording.
 
+**Live demo: https://datafinfreak.github.io/south-indian-wedding-invitation-designer/**
+
+<p align="center"><img src="docs/media/opening.gif" width="300" alt="Animated opening of the Navilu design: a peacock's train unfolds behind the card, sweeps wide and reveals the invitation"></p>
+
+## Demo gallery
+
+The [demo gallery](https://datafinfreak.github.io/south-indian-wedding-invitation-designer/) has two kinds of page:
+
+- **Real invitations.** Nine hand-built designs (envelope, temple doors, saree pallu, peacock fan, pop-up book and more) are the author's own wedding invitations, shared with permission. The couple photo is left out. They are demos only; they are not part of the skill.
+- **The template sample.** What the skill actually ships: one reusable template with six presets, shown with a fictional couple and venue.
+
+The demo pages carry a `noindex` tag. Music plays only on the two demos with CC0 tracks (credited on the page); see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
 | Mysuru Aramane (default) | Mallige Botanical | Kanjeevaram Border |
 |---|---|---|
 | ![Hero section of the sample invite in the Mysuru Aramane preset at phone width](examples/screenshots/mysuru-aramane-hero.png) | ![Hero section of the sample invite in the Mallige Botanical preset at phone width](examples/screenshots/mallige-botanical-hero.png) | ![Hero section of the sample invite in the Kanjeevaram Border preset at phone width](examples/screenshots/kanjeevaram-border-hero.png) |
@@ -93,7 +106,8 @@ The skill will ask for anything missing (for example the full address), offer th
 - The skill never invents or adds personal details and never copies details from reference material without asking.
 - It recommends stripping photo metadata (including GPS), neutral filenames, a `noindex` tag while previewing, and keeping phone numbers and home addresses off a link anyone can forward.
 - It never deploys for you and never touches your existing websites.
-- This repository contains no real wedding data, photos or music. All sample content is fictional.
+- The skill package (`skills/`) and the example in `examples/` contain no personal data, photos or music. All sample content there is fictional.
+- The only real wedding details in this repository are the demo pages in `docs/demos/` (the author's own invitations, published with the couple's permission, without the couple photo and with a `noindex` tag). They are not included in the skill zip.
 
 ## Repository layout
 
@@ -106,13 +120,14 @@ skills/south-indian-wedding-invitation-designer/
                                   photo handling, quality checklist (loaded on demand)
   assets/invite-template.html     single-file template (HTML, CSS, JS inline)
 examples/                         fictional sample invite and screenshots
+docs/                             GitHub Pages demo gallery (not part of the skill)
 evals/                            test prompts and expected behaviours
 ```
 
 ## Credits
 
 - Author: Manoj ([DataFinFreak](https://github.com/DataFinFreak)).
-- Built from the experience of designing a real family e-invite with an AI assistant; every correction from that project became a rule or pitfall in the skill. No personal data from it is included.
+- Built from the experience of designing a real family e-invite with an AI assistant; every correction from that project became a rule or pitfall in the skill. No personal data from it is included in the skill; the invitations themselves appear only as demos in `docs/`, shared with permission.
 - Fonts: Google Fonts families under the SIL Open Font License, referenced by link, not bundled. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 - Motifs in the template are original SVG drawn for this project.
 

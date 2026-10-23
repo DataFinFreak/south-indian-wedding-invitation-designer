@@ -22,11 +22,22 @@ The template loads only the active preset's families; the per-preset list is in 
 
 ## Music
 
-**No music or audio files are bundled.** Users supply their own track or choose a CC0 or CC BY recording; the skill requires the credit to be shown in the invite's footer. CC BY-SA, NC and commercial film music are not recommended.
+**No music or audio files are bundled with the skill.** Users supply their own track or choose a CC0 or CC BY recording; the skill requires the credit to be shown in the invite's footer. CC BY-SA, NC and commercial film music are not recommended.
+
+The demo gallery in `docs/` (not part of the skill) includes two public-domain recordings, re-encoded to mono MP3 at 64 kbps; each is credited on its demo page:
+
+| File | Recording | Licence |
+|---|---|---|
+| `docs/demos/music-rangoli.mp3` | "Viriboni" on veena, Pushpa Srivatsan | CC0 1.0 (public domain dedication) |
+| `docs/demos/music-kagada.mp3` | "Shri Nilotpala Nayike" on veena, L Ramakrishnan | CC0 1.0 (public domain dedication) |
+
+## Demo photos
+
+The demo pages in `docs/demos/` embed one blurred backdrop photo of the author's own (metadata stripped), published with permission. It is not licensed for reuse under Apache-2.0 and is not part of the skill.
 
 ## Photos and images
 
-**No photographs are bundled.** The example invite uses no real person's photo. Decorative motifs in the template are original SVG created for this project and are covered by the repository licence (Apache-2.0).
+**No photographs are bundled with the skill.** The example invite uses no real person's photo. Decorative motifs in the template are original SVG created for this project and are covered by the repository licence (Apache-2.0).
 
 ## Services referenced
 
