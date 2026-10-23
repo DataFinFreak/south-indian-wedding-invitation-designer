@@ -1,0 +1,28 @@
+# Build output (release zips)
+dist/
+*.zip
+*.skill
+
+# Local test material: never commit real photos, music or personal invites
+private/
+scratch/
+test-output/
+*.local.html
+
+# Python / Node
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+
+# Hosting CLIs (can contain site IDs and local paths)
+.netlify/
+.vercel/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

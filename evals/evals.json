@@ -1,0 +1,83 @@
+{
+  "skill_name": "south-indian-wedding-invitation-designer",
+  "version": "1.0.0",
+  "notes": "All names, dates and venues are fictional. Run each prompt with and without the skill and compare against expected_behaviors.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "kannada-couple-digital-invite",
+      "prompt": "We're a Kannada couple, Meera and Arjun. Can you make a digital wedding invitation we can send on WhatsApp? Aarathakshate on 13 February 2027 from 7 pm, Dhare Muhurtha on 14 February 2027, 9:30 to 10:30 am. Both at Lotus Garden Convention Centre, 12 Example Road, Mysuru 570001. We want it elegant, royal but not loud. English only please.",
+      "files": [],
+      "expected_behaviors": [
+        "Does not ask again for facts already given; asks at most one question at a time for anything missing (for example who is sending it, or whether a photo or music is wanted), each with a recommended answer.",
+        "Reads back a locked facts list before building.",
+        "Offers three directions with short text sketches, recommending mysuru-aramane or a similar royal preset.",
+        "Keeps the event names Aarathakshate and Dhare Muhurtha as given rather than renaming them, and keeps all text in English.",
+        "Fills the invite-config block: two events with ISO dates 2027-02-13 and 2027-02-14, start 19:00 and 09:30, end 10:30 for the muhurtha, timezone Asia/Kolkata, countdownTo the muhurtha event.",
+        "Prints the time window exactly as supplied; does not invent family names, an invocation, taglines or a love story.",
+        "No deity motif or religious line unless asked.",
+        "Before presenting, runs or recommends the quality checklist (screenshots at phone width, ?check scan) and states what was not tested.",
+        "Fills or explains the Open Graph tags and drafts a short WhatsApp share message using only supplied facts."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "tamil-traditional",
+      "prompt": "Make a traditional Tamil wedding invitation for my sister Priya's wedding to Karthik. Muhurtham is on 21 March 2027 between 6:00 and 7:30 am at Sri Example Kalyana Mandapam, 4 Sample Street, Chennai 600001 (fictional). Our family wants it to look auspicious. Can you also add a Tamil line at the top?",
+      "files": [],
+      "expected_behaviors": [
+        "Recognises the bride's family is sending it and asks whose names come first or whether parents' names are wanted, rather than inventing family details.",
+        "Asks the user to supply the Tamil line or offers a clearly labelled draft that must be verified by a native speaker; never silently machine-translates.",
+        "Asks whether a deity image or invocation is wanted instead of adding one by default.",
+        "Suggests a fitting preset such as temple-kolam or kanjeevaram-border with a bright ground (turmeric or ivory), not a dark theme.",
+        "Sets secondaryScript.lang to ta only with an approved line, and notes Noto Serif Tamil is loaded for it.",
+        "Prints the muhurtham window exactly (6:00 to 7:30 am) and uses start 06:00, end 07:30, timezone Asia/Kolkata.",
+        "Flags any Tamil terms it proposes (for example Muhurtham, Varaverpu) as VERIFY with a native speaker or family priest.",
+        "Does not add a reception or other events the user did not mention."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "minimalist-english",
+      "prompt": "I want a super minimal, modern e-invite for our wedding. Ananya & Rohan, 5 June 2027, 4 pm, The Example Courtyard, 9 Placeholder Lane, Bengaluru (fictional). No traditional stuff, no music, no photos. Just clean.",
+      "files": [],
+      "expected_behaviors": [
+        "Suggests contemporary-ivory (or mysore-silk-minimal) and keeps at most one subtle cultural motif, mentioning that it can be removed.",
+        "Leaves music and photos empty so those sections and the music button are hidden.",
+        "Uses minimal English wording from the templates and asks for approval of any line it proposes (for example the closing line).",
+        "Asks for an end time or confirms that none is needed for the calendar entry.",
+        "Keeps text contrast compliant: charcoal or dark grey text, never light grey such as #999 on ivory.",
+        "Does not add religious motifs, regional-language text, family names or invented taglines.",
+        "Produces a single HTML file and explains how to preview and host it without deploying for the user."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "add-our-photo",
+      "prompt": "Here's our couple photo, please add it to the invite you made. Also can you make me look a bit slimmer and fix the background? [attached: couple.jpg]",
+      "files": ["(tester supplies any non-identifying or consented sample portrait named couple.jpg)"],
+      "expected_behaviors": [
+        "Confirms both people consent to the photo being in a forwardable link.",
+        "Checks available tools; asks before installing rembg; uses the birefnet-portrait model if available, or explains the no-tool path (user supplies a cut-out PNG).",
+        "Measures rotation from the eye line instead of guessing, and centres the crop on the midpoint between the faces.",
+        "Places the cut-out in photos.couple with the template's soft halo and edge fade, never in an oval, arch or hard frame.",
+        "Strips EXIF and GPS metadata and keeps the cut-out under about 200 KB WebP at most 1000 px.",
+        "Handles the slimming request honestly: does it only because the person pictured explicitly asked, keeps it subtle, or recommends a professionally edited photo instead, and never reshapes the partner without their request.",
+        "Re-screenshots the page at phone width after adding the photo and checks that faces are not covered by text."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "incomplete-details-must-ask",
+      "prompt": "Make a wedding invitation for Meera and Arjun, sometime in February, at a hall in Mysuru. Make it beautiful.",
+      "files": [],
+      "expected_behaviors": [
+        "Does not build a finished invite with invented dates, times, venue name or address.",
+        "Asks for the missing essentials one question at a time (exact date, event names and times, venue name and full address), each with a recommended answer or default.",
+        "If the user declines to give a detail, leaves the visible placeholder (for example [WEDDING_DATE] or [VENUE_ADDRESS]) and tells the user, rather than guessing.",
+        "Does not invent a muhurtham time, a venue name, family names or taglines at any point.",
+        "Mentions that the ?check view lists any unfilled placeholders before sharing."
+      ]
+    }
+  ]
+}

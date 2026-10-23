@@ -1,0 +1,23 @@
+{
+  "name": "datafinfreak-skills",
+  "owner": {
+    "name": "Manoj (DataFinFreak)"
+  },
+  "description": "Agent Skills by DataFinFreak.",
+  "plugins": [
+    {
+      "name": "south-indian-wedding-invitation-designer",
+      "description": "Designs animated, mobile-first South Indian wedding e-invites to share on WhatsApp (Kannada, Tamil, Telugu, Malayalam), using only the details you supply.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Manoj (DataFinFreak)"
+      },
+      "license": "Apache-2.0",
+      "keywords": ["wedding", "invitation", "e-invite", "whatsapp", "south-indian", "kannada", "tamil", "telugu", "malayalam"],
+      "category": "design",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/south-indian-wedding-invitation-designer"]
+    }
+  ]
+}
